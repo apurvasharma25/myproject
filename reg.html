@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>reg</title>
+<style>
+body {
+background:url("regi.png");
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#header {
+  background-color: #f1f1f1;
+  padding: 50px 10px;
+  color: black;
+  text-align: center;
+  font-size: 90px; 
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.5s;
+  opacity:0.4;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+.sticky {
+ position: fixed;
+  top: 0;
+  width: 100%;
+}
+form{
+    font-size:30px;
+	font-weight:40px;
+	padding:20px 10px 0px 10px;
+	margin:50px 5px 0px 5px;
+	}
+	input{
+	font-size:30px;
+	font-weight:40px;
+	padding:10px 10px 10px 10px;
+	}
+	input[type="submit"] 
+	{
+      background:#141414;
+      color: white;
+    }
+</style>
+</head>
+<body>
+<div id="header">REGISTER</div>
+<div style="margin-top:200px;padding:15px 15px 100px;font-size:30px">
+<div class="container">
+<center><form method="post">
+<label for="firstname">FIRSTNAME:</label>
+&nbsp;&nbsp;&nbsp;<input type="text" name="firstname"placeholder="First Name" required><br><br>
+<label for="email">EMAIL:</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" placeholder="Email"required><br><br>
+<label for="lastname">LASTNAME:</label>
+&nbsp;&nbsp;&nbsp;<input type="text" name="lastname"placeholder="Last Name" required><br><br>
+<label for="contact">CONTACT:</label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="number" placeholder="Number" required><br><br>
+<label for="department">DEPARTMENT:</label>
+<input type="text" name="department"placeholder="Department" required><br><br>
+<label for="gender">GENDER:</label>
+<label for="male">Male</label>
+<input type="radio" name="gender" id="male" value="male">
+<label for="female">Female</label>
+<input type="radio" name="gender" id="female" value="female"><br><br>
+<a href="submit.html"><input type="submit"></a></center>
+</form>
+</div>
+</div>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.fontSize = "30px";
+  } else {
+    document.getElementById("header").style.fontSize = "90px";
+  }
+}
+
+</script>
+</body>
+</html>

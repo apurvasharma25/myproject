@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>Payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+function getValue(){
+var name=prompt("enter your name:");
+var contact=prompt("contact:");
+document.write("name entered"+ name+"details submitted"+contact);
+}
+
+function cash(){
+var nm=prompt("enter your name:");
+var contact=prompt("contact:");
+document.write("name entered"+nm+"details submitted"+contact);
+}
+</script>
+<style>
+body{
+height:850;
+margin:0 auto;
+background-image:url("paym.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+}
+.header{
+opacity:0.2;
+font-size:50px;
+position:fixed;
+top:0;
+z-index:1;
+width:100%;
+background:black;
+}
+h1{
+font-family:Verdana, sans-serif;
+text-align:center;
+color:white;
+}
+.container{
+width:100%;
+height:8px;
+background:#CCC;
+}
+.bar{
+height:8px;
+background:black;
+width:0%;
+}
+.content{
+padding:100 0;
+margin:50 auto 0 auto;
+width:80%;
+}
+form{
+    padding:150 0 0 0;
+	}
+	
+	p{
+	padding:0 auto;
+	font-size:40px;
+	}
+	input{
+	padding:10px 10px 10px 10px;
+	}
+input[type="button"] 
+	{
+      background:#141414;
+      color: white;
+    }
+</style>
+</head>
+<body>
+<div class="header">
+<h1>PAYMENT</h1>
+<div class="container">
+<div class="bar" id="mybar"></div>
+</div>
+</div>
+<div class="content">
+<center><form method="post">
+<p><b>Pay With<b></p>
+<img src="C:\Users\hp\Desktop\Notepad++\project_hms\images\paytm.png" alt="img" height="100" width="100"><br><br>
+<input type="button" value="paytm" onclick="getValue();"/><br><br>
+<img src="C:\Users\hp\Desktop\Notepad++\project_hms\images\6.png" alt="img" height="100" width="100"><br><br>
+<input type="button" value="Cash On Delivery" onclick="cash();"/></center>
+</form>
+</div>
+<script>
+window.onscroll=function()
+{myfunction()};
+
+function myfunction(){
+var scr=document.body.scrollTop||
+document.documentElement.scrollTop;
+var height=document.documentElement.scrollHeight;
+document.documentElement.clientHeight;
+var scrolled=(scr/height)*700;
+document.getElementById("mybar").style.width=scrolled + "%";
+}
+</script>
+</body>
+</html>
